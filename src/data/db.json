@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "My First Todo",
+      "completed": true
+    },
+    {
+      "id": 0.22088244518797495,
+      "title": "go to school",
+      "completed": false
+    },
+    {
+      "id": 0.35157347383073834,
+      "title": "walking",
+      "completed": false
+    }
+  ]
+}
