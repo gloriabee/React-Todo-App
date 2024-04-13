@@ -15,10 +15,19 @@ export default function Todo({todo,deleteTodo,updateTodo}) {
   setEdit(false);
 
  }
+
+ let handleCheckbox=()=>{
+  let updatedTodo={
+    id:todo.id,
+    title,
+    completed:!todo.completed
+  }
+  updateTodo(updatedTodo);
+ }
   return (
     <li className='flex justify-between items-center  dark:bg-gray-500 p-4 bg-white border border-b-gray-200'>
        <div className="todo-item flex">
-           <input type="checkbox" className='peer relative appearance-none w-5 h-5 rounded-full border mr-2 items-center border-green-400 cursor-pointer checked:bg-green-400'/>
+           <input type="checkbox" checked={todo.completed} onChange={handleCheckbox} className='peer relative appearance-none w-5 h-5 rounded-full border mr-2 items-center border-green-400 cursor-pointer checked:bg-green-400'/>
           {!edit && <span onDoubleClick={()=>setEdit(true)} className={`dark:text-white ${todo.completed ? 'line-through': ''}`}>
               {todo.title}
            </span>}
